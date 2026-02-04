@@ -1,0 +1,134 @@
+/* تأثير المثلث البرتقالي الصغير */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #ea580c;
+  /* orange-600 */
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  opacity: 1;
+  bottom: -8px;
+}
+
+/* حركة إخفاء وإظهار الهيدر */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* التنسيق الخاص بالخلفية الدائرية والمتداخلة */
+.hero-container {
+  position: relative;
+  /* background: radial-gradient(circle at 70% 50%,
+      #1a1a1a 0%,
+      #0a0a0a 100%); */
+  overflow: hidden;
+}
+
+.card-container .card-container-2 {
+  perspective: var(--perspective);
+}
+
+.card-inner .card-inner-2{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.1s ease-out;
+  /* Smooth follow-through */
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Optional: Add a slight glare effect */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135px,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 50%);
+  pointer-events: none;
+}
+
+/* Optional: smooth scroll behavior inside sidebar */
+#mobile-sidebar {
+  scroll-behavior: smooth;
+}
+
+/* Make sure overlay covers everything */
+#overlay {
+  pointer-events: none;
+  /* let clicks pass through when closed */
+}
+
+#overlay.visible {
+  pointer-events: auto;
+}
+
+.nature-bg {
+  position: absolute;
+  right: -5%;
+  top: 0;
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
+  overflow: visible;
+  /* border-bottom-left-radius: 500px; */
+  border-top-left-radius: 500px;
+  z-index: 1;
+  /* السماح للصورة بالخروج عن حدود الحاوية قليلاً إذا أردت */
+}
+
+/* منع النص والمحتويات الأخرى من الخروج */
+.content-wrapper {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* تنعيم حركة المغناطيس */
+#bicycle-img {
+  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+
+/* Smooth transition for the scroll-based movement */
+#scrolling-bike {
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

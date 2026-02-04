@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss"></style>
+    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <meta
+      name="generator"
+      content="Elementor 3.34.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto"
+    />
+    <title>FAQ - Bike Shop</title>
+  </head>
+  <body class="bg-black text-white font-sans antialiased">
+    <header
+      id="main-header"
+      class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/50 backdrop-blur-md transition-transform duration-500 py-4 px-5 sm:px-8 lg:px-12 border-b border-white/5"
+    >
+      <nav class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="text-orange-600">
+            <img
+              src="/images/bike-logo.png"
+              alt="XTRA"
+              class="h-9 sm:h-10 w-auto"
+            />
+          </div>
+        </div>
+
+        <!-- Desktop Menu (hidden below lg) -->
+        <ul class="hidden lg:flex items-center gap-7 xl:gap-9">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link text-white font-bold text-sm uppercase tracking-wider"
+              >Home</a
+            >
+          </li>
+          <li class="relative group">
+            <a
+              href="#"
+              class="nav-link text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider flex items-center gap-1 transition-colors"
+            >
+              About
+              <i
+                class="fa-solid fa-chevron-down text-[10px] mt-1 group-hover:rotate-180 transition-transform duration-300"
+              ></i>
+            </a>
+            <ul
+              class="absolute top-full left-0 mt-4 w-48 bg-[#1a1a1a] border border-white/10 rounded-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-2xl"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-6 py-3 text-zinc-400 hover:text-orange-500 hover:bg-white/5 text-sm"
+                  >Submenu 1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-6 py-3 text-zinc-400 hover:text-orange-500 hover:bg-white/5 text-sm"
+                  >Submenu 2</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="services.html"
+              class="nav-link text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="faq.html"
+              class="nav-link active text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="nav-link text-zinc-400 hover:text-white font-bold text-sm uppercase tracking-wider transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Right side: CTA + icons + Hamburger (mobile only) -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <!-- Help & Service button (hidden on very small screens if needed) -->
+          <button
+            class="hidden sm:flex bg-orange-600 hover:bg-white text-white hover:text-orange-600 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full items-center gap-2 font-bold text-sm transition-all duration-300 shadow-lg shadow-orange-900/20 group/btn"
+          >
+            <i class="fa-solid fa-bicycle group-hover/btn:animate-bounce"></i>
+            Help & Service
+          </button>
+
+          <!-- Icons (wishlist + cart) -->
+          <div class="flex items-center gap-3 sm:gap-4">
+            <div
+              class="relative cursor-pointer w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
+            >
+              <i class="fa-regular fa-heart text-white text-base"></i>
+              <span
+                class="absolute -top-1 -right-1 bg-orange-600 text-[9px] sm:text-[10px] text-white font-bold w-4 h-4 rounded-full flex items-center justify-center"
+                >0</span
+              >
+            </div>
+            <div
+              class="relative cursor-pointer w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"
+            >
+              <i class="fa-solid fa-cart-shopping text-white text-sm"></i>
+              <span
+                class="absolute -top-1 -right-1 bg-orange-600 text-[9px] sm:text-[10px] text-white font-bold w-4 h-4 rounded-full flex items-center justify-center"
+                >0</span
+              >
+            </div>
+          </div>
+
+          <!-- Hamburger button – visible < lg -->
+          <button
+            id="menu-toggle"
+            class="lg:hidden text-white focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <i
+              id="menu-icon"
+              class="fa-solid fa-bars text-2xl transition-transform duration-300"
+            ></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Sidebar / Drawer -->
+    <div
+      id="mobile-sidebar"
+      class="fixed inset-y-0 left-0 z-50 w-72 sm:w-80 bg-[#0f0f17] border-r border-white/10 transform -translate-x-full transition-transform duration-400 ease-in-out lg:hidden overflow-y-auto"
+    >
+      <div class="p-6 flex flex-col h-full">
+        <!-- Header inside sidebar -->
+        <div class="flex items-center justify-between mb-10">
+          <div class="flex items-center gap-3">
+            <img src="/images/bike-logo.png" alt="XTRA" class="h-10 w-auto" />
+          </div>
+          <button
+            id="close-menu"
+            class="text-white text-2xl focus:outline-none"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu links -->
+        <ul class="space-y-2 flex-1">
+          <li>
+            <a
+              href="index.html"
+              class="block py-3 px-4 text-white font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >Home</a
+            >
+          </li>
+
+          <li class="relative">
+            <button
+              class="w-full text-left py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors flex items-center justify-between mobile-dropdown-toggle"
+            >
+              About
+              <i
+                class="fa-solid fa-chevron-down text-sm transition-transform duration-300"
+              ></i>
+            </button>
+            <ul class="mobile-dropdown hidden pl-6 mt-1 space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="block py-2.5 px-4 text-zinc-400 hover:text-orange-500 text-sm rounded hover:bg-white/5"
+                  >Submenu 1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2.5 px-4 text-zinc-400 hover:text-orange-500 text-sm rounded hover:bg-white/5"
+                  >Submenu 2</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="services.html"
+              class="block py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >Shop</a
+            >
+          </li>
+          <li>
+            <a
+              href="faq.html"
+              class="block py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >FAQ</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block py-3 px-4 text-zinc-300 font-medium text-base rounded-lg hover:bg-white/5 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <!-- Optional: CTA button at bottom of sidebar -->
+        <div class="mt-8">
+          <button
+            class="w-full bg-orange-600 hover:bg-orange-700 text-white px-6 py-3.5 rounded-full font-bold text-sm transition-all shadow-lg shadow-orange-900/30 flex items-center justify-center gap-2"
+          >
+            <i class="fa-solid fa-bicycle"></i>
+            Help & Service
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay (dark background when sidebar open) -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 opacity-0 invisible transition-opacity duration-400 lg:hidden"
+    ></div>
+
+    <section class="bg-[#050505] py-24 px-6 font-sans">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start mb-16 gap-10"
+        >
+          <div class="max-w-xl">
+            <div
+              class="flex items-center gap-2 bg-[#1a1a1a] w-fit px-4 py-2 rounded-lg mb-6"
+            >
+              <svg
+                class="w-4 h-4 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+              </svg>
+              <span class="text-sm font-semibold text-gray-300 tracking-widest"
+                >Contact</span
+              >
+            </div>
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">
+              Common <span class="text-orange-600">Questions</span>
+            </h2>
+            <p class="text-zinc-500 text-lg leading-relaxed">
+              Please read questions below and if you can not find your answer
+              please send us your question, we will answer you as soon as
+              possible.
+            </p>
+            <div class="mt-8 flex items-center gap-3 text-white font-bold">
+              <span
+                class="bg-zinc-800 w-10 h-10 rounded-full flex items-center justify-center text-xl"
+                >?</span
+              >
+              FAQs
+            </div>
+          </div>
+
+          <div class="relative hidden mt-[20px] lg:block">
+            <div
+              class="bg-orange-600 rounded-[2rem] p-12 pr-24 rotate-[-2deg] relative"
+            >
+              <h3 class="text-5xl font-black leading-tight">
+                "BIKE<br />SHOP<br />FAQ
+              </h3>
+              <div
+                class="absolute -top-6 -right-6 bg-orange-600 border-4 border-black w-24 h-24 rounded-full flex items-center justify-center"
+              >
+                <svg
+                  class="w-12 h-12 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="5.5" cy="17.5" r="3.5" />
+                  <circle cx="18.5" cy="17.5" r="3.5" />
+                  <path
+                    d="M15 6a1 1 0 100-2 1 1 0 000 2zm-3 11.5V14l-3-3 4-3 2 3h2"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-2 space-y-4">
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-[#0c0c0c] transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span class="text-orange-600 font-bold text-lg"
+                  >What types of bikes do you sell?</span
+                >
+                <svg
+                  class="w-6 h-6 text-orange-600 transform transition-transform duration-300 rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-[500px] transition-all duration-500 ease-in-out group-focus:bg-white"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-transparent transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span
+                  class="text-white font-bold text-lg group-hover:text-orange-600 transition-colors"
+                  >Can I test ride a bike before buying it?</span
+                >
+                <svg
+                  class="w-6 h-6 text-zinc-500 group-hover:text-orange-600 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-0 transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-transparent transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span
+                  class="text-white font-bold text-lg group-hover:text-orange-600 transition-colors"
+                  >Can I test ride a bike before buying it?</span
+                >
+                <svg
+                  class="w-6 h-6 text-zinc-500 group-hover:text-orange-600 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-0 transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-transparent transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span
+                  class="text-white font-bold text-lg group-hover:text-orange-600 transition-colors"
+                  >Can I test ride a bike before buying it?</span
+                >
+                <svg
+                  class="w-6 h-6 text-zinc-500 group-hover:text-orange-600 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-0 transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-transparent transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span
+                  class="text-white font-bold text-lg group-hover:text-orange-600 transition-colors"
+                  >Can I test ride a bike before buying it?</span
+                >
+                <svg
+                  class="w-6 h-6 text-zinc-500 group-hover:text-orange-600 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-0 transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+            <div
+              class="accordion-item border border-zinc-800 rounded-xl overflow-hidden bg-transparent transition-all"
+            >
+              <button
+                class="w-full flex justify-between items-center p-6 text-left group"
+                onclick="toggleAccordion(this)"
+              >
+                <span
+                  class="text-white font-bold text-lg group-hover:text-orange-600 transition-colors"
+                  >Can I test ride a bike before buying it?</span
+                >
+                <svg
+                  class="w-6 h-6 text-zinc-500 group-hover:text-orange-600 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <div
+                class="accordion-content max-h-0 transition-all duration-500 ease-in-out overflow-hidden"
+              >
+                <div
+                  class="p-6 pt-0 text-zinc-400 leading-relaxed border-t border-zinc-900/50"
+                >
+                  We offer road bikes, mountain bikes, hybrid bikes, electric
+                  bikes, kids’ bikes, and more to suit all cycling needs.
+                  Absolutely! Test rides are available for most models in our
+                  store to ensure the right fit and comfort. We stock top brands
+                  including Trek, Giant, Specialized, Cannondale, and more. We
+                  allow returns or exchanges within 14 days of purchase,
+                  provided the bike is in like-new condition.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#0c0c0c] p-8 rounded-3xl border border-zinc-800">
+            <form class="space-y-6">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                  <label
+                    class="text-zinc-500 text-xs font-bold uppercase tracking-widest"
+                    >Your Name (*)</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full bg-[#141414] border border-zinc-800 rounded-xl py-4 px-4 text-white focus:border-orange-600 outline-none transition-colors"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-zinc-500 text-xs font-bold uppercase tracking-widest"
+                    >Your Email (*)</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full bg-[#141414] border border-zinc-800 rounded-xl py-4 px-4 text-white focus:border-orange-600 outline-none transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-500 text-xs font-bold uppercase tracking-widest"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  class="w-full bg-[#141414] border border-zinc-800 rounded-xl py-4 px-4 text-white focus:border-orange-600 outline-none transition-colors"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-500 text-xs font-bold uppercase tracking-widest"
+                  >Department</label
+                >
+                <select
+                  class="w-full bg-[#141414] border border-zinc-800 rounded-xl py-4 px-4 text-white focus:border-orange-600 outline-none transition-colors appearance-none"
+                >
+                  <option>Business Department</option>
+                  <option>Support</option>
+                  <option>Sales</option>
+                </select>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-zinc-500 text-xs font-bold uppercase tracking-widest"
+                  >Your Question</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full bg-[#141414] border border-zinc-800 rounded-xl py-4 px-4 text-white focus:border-orange-600 outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-1/2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 rounded-full transition-all active:scale-95 uppercase tracking-tighter"
+              >
+                Ask
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <section class="px-20">
+        <div
+          class="max-w-7xl mx-auto bg-[#202020] rounded-t-[80px] border-t border-x border-zinc-800"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 py-20 px-10 gap-12 md:gap-0"
+          >
+            <div
+              class="flex flex-col items-center text-center space-y-4 md:border-r border-zinc-800"
+            >
+              <span class="text-orange-500 uppercase tracking-widest text-sm"
+                >Pre-sale Questions</span
+              >
+              <a
+                href="mailto:help@xtrabicycle.com"
+                class="text-white text-lg font-bold hover:text-orange-500 transition-colors"
+              >
+                help@xtrabicycle.com
+              </a>
+            </div>
+            <div
+              class="flex flex-col items-center text-center space-y-4 md:border-r border-zinc-800"
+            >
+              <span class="text-orange-500 uppercase tracking-widest text-sm"
+                >Call Us</span
+              >
+              <a
+                href="tel:+180023456789"
+                class="text-white text-lg font-bold hover:text-orange-500 transition-colors"
+              >
+                +1 800 2345 6789
+              </a>
+            </div>
+
+            <div class="flex flex-col items-center text-center space-y-4">
+              <span class="text-orange-500 uppercase tracking-widest text-sm"
+                >Our Location</span
+              >
+              <p class="text-white text-lg font-bold">
+                #2354, Beverly Hills, LA
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="mx-auto bg-[#1A1A1A] pt-16 pb-8 px-6 lg:px-20">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-zinc-800 pb-16"
+        >
+          <div class="footer-column-one">
+            <h3 class="text-xl font-bold mb-2">Office</h3>
+            <div class="w-8 h-1 bg-orange-600 mb-8"></div>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-4 group">
+                <div
+                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center transition-transform group-hover:scale-125 text-orange-600 group-hover:text-white group-hover:bg-orange-600"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <span class="text-zinc-300">121 King Street, NewYork</span>
+              </li>
+              <li class="flex items-center gap-4 group">
+                <div
+                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-125 text-orange-600 group-hover:text-white group-hover:bg-orange-600"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <span class="text-zinc-300">+1 (800) 333 44 55</span>
+              </li>
+              <li class="flex items-center gap-4 group">
+                <div
+                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-125 text-orange-600 group-hover:text-white group-hover:bg-orange-600"
+                >
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <span class="text-zinc-300">xtrabike@gmail.com</span>
+              </li>
+              <li class="flex items-center gap-4 group">
+                <div
+                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-125 text-orange-600 group-hover:text-white group-hover:bg-orange-600"
+                >
+                  <i class="fa-solid fa-fax"></i>
+                </div>
+                <span class="text-zinc-300">+1 (800) 333 99 88</span>
+              </li>
+              <li class="flex items-center gap-4 group">
+                <div
+                  class="w-10 h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-125 text-orange-600 group-hover:text-white group-hover:bg-orange-600"
+                >
+                  <i class="fa-brands fa-x-twitter">X</i>
+                </div>
+                <span class="text-zinc-300">@xtra_bikeshop</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-2">News</h3>
+            <div class="w-8 h-1 bg-orange-600 mb-8"></div>
+            <div class="space-y-6">
+              <div class="flex gap-4 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=100&h=100&fit=crop"
+                  class="w-20 h-20 rounded-lg object-cover transition-transform duration-500 hover:scale-125"
+                  alt="News"
+                />
+                <div class="flex flex-col justify-center">
+                  <h4
+                    class="font-bold text-sm hover:text-orange-500 cursor-pointer transition-colors"
+                  >
+                    Top 7 Must have Accessories for...
+                  </h4>
+                  <div
+                    class="flex items-center gap-4 text-xs text-zinc-500 mt-1"
+                  >
+                    <span
+                      ><i class="fa-regular fa-clock mr-1"></i> 10 June
+                      2024</span
+                    >
+                    <span><i class="fa-regular fa-eye mr-1"></i> 20</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-4 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=100&h=100&fit=crop"
+                  class="w-20 h-20 rounded-lg object-cover transition-transform duration-500 hover:scale-125"
+                  alt="News"
+                />
+                <div class="flex flex-col justify-center">
+                  <h4
+                    class="font-bold text-sm hover:text-orange-500 cursor-pointer transition-colors"
+                  >
+                    How to Choose the Perfect Bike for Yo...
+                  </h4>
+                  <div
+                    class="flex items-center gap-4 text-xs text-zinc-500 mt-1"
+                  >
+                    <span
+                      ><i class="fa-regular fa-clock mr-1"></i> 10 June
+                      2024</span
+                    >
+                    <span><i class="fa-regular fa-eye mr-1"></i> 12</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-column-three">
+            <h3 class="text-xl font-bold mb-2">Shortcuts</h3>
+            <div class="w-8 h-1 bg-orange-600 mb-8"></div>
+            <div
+              class="grid grid-cols-2 gap-y-3 text-white transition-transform"
+            >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i> Home</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i> Maps</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i> City
+                Store</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Careers</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i> News</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Employees</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Clients</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i> Teams</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Consultation</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Benefits</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Publicity</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Privacy</a
+              >
+              <a
+                href="#"
+                class="flex items-center gap-2 hover:text-orange-400 hover:ml-2"
+                ><i class="fa-solid fa-chevron-right text-[10px]"></i>
+                Support</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-2">Working Hours</h3>
+            <div class="w-8 h-1 bg-orange-600 mb-8"></div>
+            <p class="text-zinc-300 mb-1 leading-relaxed">
+              Our support available to help you
+            </p>
+            <p class="text-zinc-300 mb-6 font-bold">
+              24 hours a day, seven days a week.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-zinc-300">Monday to Friday</span>
+                <div
+                  class="flex-grow mx-2 border-b border-zinc-800 border-dotted"
+                ></div>
+                <span class="font-bold">8AM – 4PM</span>
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-zinc-300">Saturday</span>
+                <div
+                  class="flex-grow mx-2 border-b border-zinc-800 border-dotted"
+                ></div>
+                <span class="font-bold">8AM – 1PM</span>
+              </div>
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-zinc-300">Sunday</span>
+                <div
+                  class="flex-grow mx-2 border-b border-zinc-800 border-dotted"
+                ></div>
+                <span class="font-bold">Closed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center pt-8 gap-6"
+        >
+          <p class="text-zinc-500 text-sm">
+            Copyright © 2026 Xtra Theme. All Rights Reserved.
+          </p>
+          <div class="flex items-center gap-4 opacity-80">
+            <img src="/images/payments.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed bottom-6 right-6 flex flex-col gap-3">
+        <button
+          class="w-12 h-12 bg-orange-600 text-white rounded-xl shadow-lg flex items-center justify-center text-xl"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+        <button
+          class="w-12 h-12 bg-orange-600 text-white rounded-xl shadow-lg flex items-center justify-center text-xl"
+        >
+          <i class="fa-solid fa-chevron-up"></i>
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
